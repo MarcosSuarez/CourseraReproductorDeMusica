@@ -44,7 +44,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print("Canción seleccionada: \(nombreCanciones[row])")
     }
-
+    
     // MARK: VOLUMEN
     @IBAction func volumen(sender: UISlider) {
         print("volumen en \(sender.value * 100)%")
@@ -63,8 +63,21 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         print("Presionado PAUSAR")
     }
     
-    @IBAction func shufle(sender: UIButton) {
-        print("presionado SHUFLE")
+    @IBAction func shufle(sender: UIButton)
+    {
+        let posicionActual = ruleta.selectedRowInComponent(0)
+        
+        var azar = Int(arc4random_uniform(UInt32(nombreCanciones.count)))
+        
+        // Para minimizar las opciones que se repitan.
+        if posicionActual == azar { azar = Int(arc4random_uniform(UInt32(nombreCanciones.count))) }
+        
+        ruleta.selectRow(azar, inComponent: 0, animated: true)
+        
+        // PLAY DE LA CANCIÓN:
+        print("Canción Nro. \(azar) sonando: \(nombreCanciones[azar])")
+        // cambio el título.
+        labelTitulo.text = nombreCanciones[azar]
     }
     
 }
