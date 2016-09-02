@@ -17,10 +17,25 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     let album = ["primera","segunda","tercera","cuarta","quinta","sexta","septima","octava","novena","decima"]
     
+    private var reproductor: AVAudioPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Delegado del PickerView
         ruleta.delegate = self
+    }
+    
+    
+    func cargarMusica(nombreCancion: String)
+    {
+        // Encontrar el path
+        let sonidoURL = NSBundle.mainBundle().URLForResource(nombreCancion, withExtension: "mp3")
+        // Conexión con reproductor
+        do {
+            try reproductor = AVAudioPlayer(contentsOfURL: sonidoURL!)
+        } catch {
+            print("Error al cargar el archivo: \(sonidoURL)")
+        }
     }
     
     //MARK: PickerView RULETA
@@ -44,7 +59,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     {
         // Se ha seleccionado una fila en el pickerView.
         labelTitulo.text = album[row]
+        // cargar musica.
+        cargarMusica(album[row])
         // Iniciar la canción
+        if !reproductor.playing { reproductor.play() }
     }
     
     // MARK: VOLUMEN
@@ -55,14 +73,20 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     // MARK: BOTONES
     @IBAction func detener(sender: UIButton) {
         print("presionado DETENER")
+        if reproductor.playing {
+            reproductor.currentTime = 0
+            reproductor.stop()
+        }
     }
 
     @IBAction func tocar(sender: UIButton) {
         print("presionado TOCAR")
+        if !reproductor.playing { reproductor.play() }
     }
     
     @IBAction func pausar(sender: UIButton) {
         print("Presionado PAUSAR")
+        if reproductor.playing { reproductor.pause() }
     }
     
     @IBAction func shufle(sender: UIButton)
