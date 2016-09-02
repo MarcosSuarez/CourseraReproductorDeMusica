@@ -25,13 +25,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="363"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITULO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CkM-Ie-HbM">
-                                                <rect key="frame" x="251" y="0.0" width="59" height="355"/>
+                                                <rect key="frame" x="251" y="0.0" width="59" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9PY-ec-4T0">
-                                                <rect key="frame" x="280" y="363" width="0.0" height="0.0"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SimónDiaz" translatesAutoresizingMaskIntoConstraints="NO" id="9PY-ec-4T0">
+                                                <rect key="frame" x="179" y="41" width="202" height="322"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="hMW-ux-s1J"/>
                                                 </constraints>
@@ -149,4 +149,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="SimónDiaz" width="202" height="201"/>
+    </resources>
 </document>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -20,7 +21,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // Delegado del PickerView
         ruleta.delegate = self
     }
     
@@ -75,9 +76,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         ruleta.selectRow(azar, inComponent: 0, animated: true)
         
         // PLAY DE LA CANCIÓN:
-        print("Canción Nro. \(azar) sonando: \(nombreCanciones[azar])")
+        print("Canción Nro. \(azar+1) sonando: \(nombreCanciones[azar])")
         // cambio el título.
         labelTitulo.text = nombreCanciones[azar]
+        // Muestro el Albúm.
+        
+        // Suena la canción.
+        
     }
     
 }

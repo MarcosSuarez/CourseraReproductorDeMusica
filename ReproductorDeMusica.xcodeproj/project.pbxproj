@@ -35,6 +35,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		171931221D79D7380080D06E /* Canciones */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Canciones;
+			sourceTree = "<group>";
+		};
 		176DABC91D79B0D4000F9120 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +61,7 @@
 		176DABD41D79B0D5000F9120 /* ReproductorDeMusica */ = {
 			isa = PBXGroup;
 			children = (
+				171931221D79D7380080D06E /* Canciones */,
 				176DABD51D79B0D5000F9120 /* AppDelegate.swift */,
 				176DABD71D79B0D5000F9120 /* ViewController.swift */,
 				176DABD91D79B0D5000F9120 /* Main.storyboard */,
@@ -289,6 +297,7 @@
 				176DABE61D79B0D5000F9120 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
