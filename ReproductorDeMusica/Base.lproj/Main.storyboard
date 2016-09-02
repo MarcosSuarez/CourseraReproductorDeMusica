@@ -142,6 +142,7 @@
                     <connections>
                         <outlet property="imagen" destination="9PY-ec-4T0" id="THN-3z-iBe"/>
                         <outlet property="labelTitulo" destination="CkM-Ie-HbM" id="p39-qU-jRL"/>
+                        <outlet property="ruleta" destination="AzN-VJ-iuv" id="vka-Ab-bm7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
