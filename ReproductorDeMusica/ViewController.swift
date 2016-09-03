@@ -34,17 +34,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         ruleta.delegate = self
         
         // DISCOS
-        disco = [ Album(titulo: "Caballo Viejo", archivo: "", imagen: UIImage(named: "SimonDiaz")!),
-                  Album(titulo: "Me gustas tú", archivo: "", imagen: UIImage(named: "ManuChao")!),
-                  Album(titulo: "De música ligera", archivo: "", imagen: UIImage(named: "SodaEstereo")!),
-                  Album(titulo: "Párate y mira", archivo: "", imagen: UIImage(named: "LosPericos")!),
-                  Album(titulo: "El matador", archivo: "", imagen: UIImage(named: "Cadillacs")!),
-                  Album(titulo: "Sólo se vive una vez", archivo: "", imagen: UIImage(named: "azucar")!),
-                  Album(titulo: "Mirala miralo", archivo: "", imagen: UIImage(named: "AleGuzman")!),
-                  Album(titulo: "Me haces tanto bien", archivo: "", imagen: UIImage(named: "amistades")!)]
+        disco = [ Album(titulo: "Could you Be Loved", archivo: "CouldYouBeLoved", imagen: UIImage(named: "BobMarley")!),
+                  Album(titulo: "Loco", archivo: "Loco", imagen: UIImage(named: "Loco")!),
+                  Album(titulo: "Voy A Beber", archivo: "VoyABeber", imagen: UIImage(named: "VoyABeber")!),
+                  Album(titulo: "Prrum.. Cosculluela", archivo: "Prrum", imagen: UIImage(named: "PrrumCosculluela")!),
+                  Album(titulo: "Bailando", archivo: "Bailando", imagen: UIImage(named: "Bailando")!),
+                  Album(titulo: "Batender", archivo: "Batender", imagen: UIImage(named: "Batender")!),
+                  Album(titulo: "Temperatura Chino y Nacho", archivo: "Temperatura", imagen: UIImage(named: "TemperaturaChinoYnacho")!),
+                  Album(titulo: "Macarena", archivo: "Macarena", imagen: UIImage(named: "Macarena")!)]
         
         // Cargamos la canción inicial.
-        cargarMusica("Caballo Viejo")
+        cargarMusica("CouldYouBeLoved")
     }
     
     // MARK: Cargar Música
