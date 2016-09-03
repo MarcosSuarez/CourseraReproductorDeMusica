@@ -50,16 +50,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     // MARK: Cargar Música
     func cargarMusica(nombreCancion: String)
     {
-        // Evitamos cargar la misma música que esta sonando.
-        guard nombreCancion != disco[ruleta.selectedRowInComponent(0)].titulo else { return }
-        
         // Encontrar el path
         let sonidoURL = NSBundle.mainBundle().URLForResource(nombreCancion, withExtension: "mp3")
+        
         // Conexión con reproductor
         do {
             try reproductor = AVAudioPlayer(contentsOfURL: sonidoURL!)
             reproductor.volume = controlVolumen.value
-            reproductor.play()
         } catch {
             print("Error al cargar el archivo: \(sonidoURL)")
         }
@@ -90,12 +87,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         cargarMusica(disco[row].archivo)
         // mostrar carátula.
         imagen.image = disco[row].imagen
+        // play
+        if !reproductor.playing {reproductor.play()}
     }
     
     // MARK: VOLUMEN
     @IBAction func volumen(sender: UISlider) {
-        reproductor.volume = Float(sender.value / 100)
-        print("volumen en \(sender.value)%")
+        reproductor.volume = Float(sender.value)
     }
     
     // MARK: BOTONES
@@ -121,6 +119,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     {
         let posicionActual = ruleta.selectedRowInComponent(0)
         
+        // detengo la musica si esta sonando.
+        if reproductor.playing { reproductor.stop() }
+        
         var azar = Int(arc4random_uniform(UInt32(disco.count)))
         
         // Para minimizar las opciones que se repitan.
@@ -135,7 +136,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         labelTitulo.text = disco[azar].titulo
         // Muestrar carátula.
         imagen.image = disco[azar].imagen
-        // Suena la canción.
+        // play
+        if !reproductor.playing {reproductor.play()}
         
     }
     
