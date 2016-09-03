@@ -12,6 +12,14 @@
 		176DABDB1D79B0D5000F9120 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176DABD91D79B0D5000F9120 /* Main.storyboard */; };
 		176DABDD1D79B0D5000F9120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 176DABDC1D79B0D5000F9120 /* Assets.xcassets */; };
 		176DABE01D79B0D5000F9120 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176DABDE1D79B0D5000F9120 /* LaunchScreen.storyboard */; };
+		1781B72E1D7ADE0800B34ABE /* Loco.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1781B7271D7ADE0800B34ABE /* Loco.mp3 */; };
+		1781B72F1D7ADE0800B34ABE /* CouldYouBeLoved.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1781B7281D7ADE0800B34ABE /* CouldYouBeLoved.mp3 */; };
+		1781B7301D7ADE0800B34ABE /* VoyABeber.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1781B7291D7ADE0800B34ABE /* VoyABeber.mp3 */; };
+		1781B7311D7ADE0800B34ABE /* Prrum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1781B72A1D7ADE0800B34ABE /* Prrum.mp3 */; };
+		1781B7321D7ADE0800B34ABE /* Temperatura.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1781B72B1D7ADE0800B34ABE /* Temperatura.mp3 */; };
+		1781B7331D7ADE0800B34ABE /* Batender.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1781B72C1D7ADE0800B34ABE /* Batender.mp3 */; };
+		1781B7341D7ADE0800B34ABE /* Bailando.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1781B72D1D7ADE0800B34ABE /* Bailando.mp3 */; };
+		1781B7361D7ADE2400B34ABE /* Macarena.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1781B7351D7ADE2400B34ABE /* Macarena.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,14 @@
 		176DABDC1D79B0D5000F9120 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		176DABDF1D79B0D5000F9120 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		176DABE11D79B0D5000F9120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1781B7271D7ADE0800B34ABE /* Loco.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Loco.mp3; sourceTree = "<group>"; };
+		1781B7281D7ADE0800B34ABE /* CouldYouBeLoved.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CouldYouBeLoved.mp3; sourceTree = "<group>"; };
+		1781B7291D7ADE0800B34ABE /* VoyABeber.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = VoyABeber.mp3; sourceTree = "<group>"; };
+		1781B72A1D7ADE0800B34ABE /* Prrum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Prrum.mp3; sourceTree = "<group>"; };
+		1781B72B1D7ADE0800B34ABE /* Temperatura.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Temperatura.mp3; sourceTree = "<group>"; };
+		1781B72C1D7ADE0800B34ABE /* Batender.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Batender.mp3; sourceTree = "<group>"; };
+		1781B72D1D7ADE0800B34ABE /* Bailando.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bailando.mp3; sourceTree = "<group>"; };
+		1781B7351D7ADE2400B34ABE /* Macarena.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Macarena.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +54,14 @@
 		171931221D79D7380080D06E /* Canciones */ = {
 			isa = PBXGroup;
 			children = (
+				1781B7351D7ADE2400B34ABE /* Macarena.mp3 */,
+				1781B7271D7ADE0800B34ABE /* Loco.mp3 */,
+				1781B7281D7ADE0800B34ABE /* CouldYouBeLoved.mp3 */,
+				1781B7291D7ADE0800B34ABE /* VoyABeber.mp3 */,
+				1781B72A1D7ADE0800B34ABE /* Prrum.mp3 */,
+				1781B72B1D7ADE0800B34ABE /* Temperatura.mp3 */,
+				1781B72C1D7ADE0800B34ABE /* Batender.mp3 */,
+				1781B72D1D7ADE0800B34ABE /* Bailando.mp3 */,
 			);
 			name = Canciones;
 			sourceTree = "<group>";
@@ -133,7 +157,15 @@
 			files = (
 				176DABE01D79B0D5000F9120 /* LaunchScreen.storyboard in Resources */,
 				176DABDD1D79B0D5000F9120 /* Assets.xcassets in Resources */,
+				1781B7301D7ADE0800B34ABE /* VoyABeber.mp3 in Resources */,
+				1781B72F1D7ADE0800B34ABE /* CouldYouBeLoved.mp3 in Resources */,
+				1781B7341D7ADE0800B34ABE /* Bailando.mp3 in Resources */,
 				176DABDB1D79B0D5000F9120 /* Main.storyboard in Resources */,
+				1781B72E1D7ADE0800B34ABE /* Loco.mp3 in Resources */,
+				1781B7331D7ADE0800B34ABE /* Batender.mp3 in Resources */,
+				1781B7311D7ADE0800B34ABE /* Prrum.mp3 in Resources */,
+				1781B7321D7ADE0800B34ABE /* Temperatura.mp3 in Resources */,
+				1781B7361D7ADE2400B34ABE /* Macarena.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

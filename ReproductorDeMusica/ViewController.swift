@@ -21,6 +21,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var imagen: UIImageView!
     @IBOutlet weak var ruleta: UIPickerView!
 
+    @IBOutlet weak var controlVolumen: UISlider!
+    
     var disco = [Album]()
     
     private var reproductor: AVAudioPlayer = AVAudioPlayer()
@@ -39,22 +41,25 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                   Album(titulo: "El matador", archivo: "", imagen: UIImage(named: "Cadillacs")!),
                   Album(titulo: "Sólo se vive una vez", archivo: "", imagen: UIImage(named: "azucar")!),
                   Album(titulo: "Mirala miralo", archivo: "", imagen: UIImage(named: "AleGuzman")!),
-                  Album(titulo: "Me haces tanto bien", archivo: "", imagen: UIImage(named: "amistades")!),
-                  Album(titulo: "Cumpleaños Feliz", archivo: "", imagen: UIImage(named: "Tambor")!),
-                  Album(titulo: "HighWay to Hell", archivo: "", imagen: UIImage(named: "ACDC")!) ]
+                  Album(titulo: "Me haces tanto bien", archivo: "", imagen: UIImage(named: "amistades")!)]
         
-        // Control de volumen
-        //reproductor.volume = Float(0.5)
+        // Cargamos la canción inicial.
+        cargarMusica("Caballo Viejo")
     }
     
-    
+    // MARK: Cargar Música
     func cargarMusica(nombreCancion: String)
     {
+        // Evitamos cargar la misma música que esta sonando.
+        guard nombreCancion != disco[ruleta.selectedRowInComponent(0)].titulo else { return }
+        
         // Encontrar el path
         let sonidoURL = NSBundle.mainBundle().URLForResource(nombreCancion, withExtension: "mp3")
         // Conexión con reproductor
         do {
             try reproductor = AVAudioPlayer(contentsOfURL: sonidoURL!)
+            reproductor.volume = controlVolumen.value
+            reproductor.play()
         } catch {
             print("Error al cargar el archivo: \(sonidoURL)")
         }
@@ -82,11 +87,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Se ha seleccionado una fila en el pickerView.
         labelTitulo.text = disco[row].titulo
         // cargar musica.
-        //cargarMusica(album[row])
+        cargarMusica(disco[row].archivo)
         // mostrar carátula.
         imagen.image = disco[row].imagen
-        // Iniciar la canción
-        //if !reproductor.playing { reproductor.play() }
     }
     
     // MARK: VOLUMEN
@@ -126,6 +129,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         ruleta.selectRow(azar, inComponent: 0, animated: true)
         
         // PLAY DE LA CANCIÓN:
+        cargarMusica(disco[azar].archivo)
         
         // cambio el título.
         labelTitulo.text = disco[azar].titulo
